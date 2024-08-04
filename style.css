@@ -6,17 +6,17 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
- .centered-text {
-            text-align: center;
-            display: block;
-            font-size: small;
-            color: gray;
-        }
+
 body{
     height: 100vh;
     background: #0a1d30;
 }
-
+.centered-text{
+            text-align: center;
+            display: block;
+            font-size: small;
+            color: gray;
+}
 .navbar{
     display: flex;
     align-items: center;
