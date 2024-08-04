@@ -6,7 +6,12 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+ .centered-text {
+            text-align: center;
+            display: block;
+            font-size: small;
+            color: gray;
+        }
 body{
     height: 100vh;
     background: #0a1d30;
@@ -380,7 +385,20 @@ footer .cols .news-col form button{
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+.styled-btn {
+    background-color: #327098;
+    color: #fff;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
+.styled-btn:hover {
+    background-color: #255474;
+}
 footer .cols .news-col form button:hover{
     background-color: #1d1a43;
 }
@@ -449,13 +467,13 @@ footer .cols .news-col form button i{
     .navbar button{
         display: none;
     }
-
+ 
     .main h4{
         font-size: 24px;
     }
 
     .main p.title{
-        font-size: 36px;
+        font-size: 22px;
     }
 
     .main p.subtitle{
@@ -478,7 +496,7 @@ footer .cols .news-col form button i{
     .navbar{
         justify-content: center;
     }
-
+    
     .navbar h2{
         display: none;
     }
@@ -498,7 +516,7 @@ footer .cols .news-col form button i{
     }
 
     .main p.title{
-        font-size: 28px;
+        font-size:19px;
     }
 
     .main p.subtitle{
@@ -549,9 +567,12 @@ footer .cols .news-col form button i{
 }
 
 @media screen and (max-width: 480px) {
+    .main h4{
+        font-size: 16px;
+    }
     
     .main p.title{
-        font-size: 18px;
+        font-size: 13px;
     }
 
     .main p.subtitle{
@@ -565,19 +586,12 @@ footer .cols .news-col form button i{
     .guarantee .item .info p{
         font-size: 12px;
     }
+    .seprator{
+        margin: 70px 10px;
+    }
 
-}
-.styled-btn {
-    background-color: #327098;
-    color: #fff;
-    padding: 8px 20px;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+    .skills{
+        padding: 0 10px; 
+    }
 
-.styled-btn:hover {
-    background-color: #255474;
 }
