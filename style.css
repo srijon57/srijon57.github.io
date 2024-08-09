@@ -254,15 +254,6 @@ body{
     flex-wrap: wrap;
     gap: 12px;
 }
-
-.skills .right .item i{
-    font-size: 34px;
-    color: #fff;
-}
-.skills .right .item .iconify {
-    color: #fff;
-}
-
 .skills .right .item {
     display: flex;
     align-items: center;
@@ -272,8 +263,13 @@ body{
     height: 50px;
     border-radius: 10px;
 }
-
-
+.skills .right .item i{
+    font-size: 34px;
+    color: white;
+}
+.skills .right .item .iconify {
+    color:white;
+}
 footer{
     position: relative;
     background: #1c1c1c;
