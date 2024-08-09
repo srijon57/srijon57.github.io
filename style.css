@@ -185,8 +185,13 @@ body{
     display: inline-block;
     color: #327098;
     border-radius: 12px;
+    #resume {
+    margin-top: 150px;
 }
-
+}
+#resume {
+    margin-top: 200px;
+}
 .about{
     display: flex;
     justify-content: space-between;
@@ -250,7 +255,15 @@ body{
     gap: 12px;
 }
 
-.skills .right .item{
+.skills .right .item i{
+    font-size: 34px;
+    color: #fff;
+}
+.skills .right .item .iconify {
+    color: #fff;
+}
+
+.skills .right .item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -260,10 +273,6 @@ body{
     border-radius: 10px;
 }
 
-.skills .right .item i{
-    font-size: 34px;
-    color: #fff;
-}
 
 footer{
     position: relative;
@@ -467,7 +476,6 @@ footer .cols .news-col form button i{
     .navbar button{
         display: none;
     }
- 
     .main h4{
         font-size: 24px;
     }
