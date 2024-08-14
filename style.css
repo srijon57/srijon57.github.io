@@ -9,7 +9,7 @@
 
 body{
     height: 100vh;
-    background: #0a1d30;
+    background: #000914;
 }
 .centered-text{
             text-align: center;
@@ -29,7 +29,9 @@ body{
     color: #327098;
     font-weight: 600;
 }
-
+.navbar h2:hover{
+    transform: scale(1.1);
+}
 .navbar ul{
     display: flex;
 }
@@ -46,8 +48,10 @@ body{
     transition: color 0.3s ease;
 }
 
-.navbar ul li:hover a{
+.navbar ul li:hover a,
+.navbar ul li:active{
     color: #327098;
+    border-bottom: 3px solid #327098;
 }
 
 .navbar ul li:last-child a{
@@ -74,6 +78,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 
 .main h4{
@@ -87,11 +92,51 @@ body{
     text-decoration: underline;
 }
 
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid #4b7fb7;
+    }
+}
 .main p.title{
     font-size: 44px;
     font-weight: 600;
-    color: #fff;
-    margin-top: 8px;
+    min-width: 280px;
+    position: relative;
+}
+
+.main p.title::before{
+    content: "Software Engineer";
+    color: #4b7fb7;
+    animation: words 20s infinite;
+}
+
+.main p.title::after{
+    content: "";
+    background-color: #000914;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+@keyframes words{
+    0%, 20%{
+        content: "Code Enthusiast";
+    }
+    21%, 40%{
+        content: "Competitive Programmer";
+    }
+    41%, 60%{
+        content: "Problem Solver";
+    }
+    61%, 80%{
+        content: "Sportsman";
+    }
+    81%, 100%{
+        content: "Software Engineer";
+    }
 }
 
 .main p.subtitle{
@@ -105,7 +150,27 @@ body{
     height: 200px;
     margin-top: 100px;
 }
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #4b7fb7;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #4b7fb7;
+}
 
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #4b7fb7;
+    box-shadow: 0  0 25px #4b7fb7;
+}
 .guarantee{
     margin-top: 50px;
     padding: 0 50px;
@@ -464,8 +529,20 @@ footer .cols .news-col form button i{
     footer .cols .news-col{
         flex-basis: 50%;
     }
-
+    .main{
+        padding-bottom: 350px;
+    }
+    .social-icons a {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        margin: 2rem 1rem 2rem 0;
+    }
+    #resume {
+        margin-top: 300px;
+    }
 }
+
 
 @media screen and (max-width: 780px) {
     
