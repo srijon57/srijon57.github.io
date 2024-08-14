@@ -103,15 +103,22 @@ body{
     font-weight: 600;
     min-width: 280px;
     position: relative;
+    color: white;
+}
+.main p.title span{
+    font-size: 44px;
+    font-weight: 600;
+    min-width: 280px;
+    position: relative;
 }
 
-.main p.title::before{
+.main p.title span::before{
     content: "Software Engineer";
     color: #4b7fb7;
     animation: words 20s infinite;
 }
 
-.main p.title::after{
+.main p.title span::after{
     content: "";
     background-color: #000914;
     position: absolute;
@@ -122,21 +129,21 @@ body{
     animation: cursor 0.6s infinite;
 }
 @keyframes words{
-    0%, 20%{
-        content: "Code Enthusiast";
+    0%, 20% {
+        content: "CODE ENTHUSIAST";
     }
-    21%, 40%{
-        content: "Competitive Programmer";
+    21%, 40% {
+        content: "COMPETITIVE PROGRAMMER";
     }
-    41%, 60%{
-        content: "Problem Solver";
+    41%, 60% {
+        content: "PROBLEM SOLVER";
     }
-    61%, 80%{
-        content: "Sportsman";
+    61%, 80% {
+        content: "SPORTSMAN";
     }
-    81%, 100%{
-        content: "Software Engineer";
-    }
+    81%, 100% {
+        content: "SOFTWARE ENGINEER";
+    }    
 }
 
 .main p.subtitle{
@@ -149,6 +156,7 @@ body{
     width: 200px;
     height: 200px;
     margin-top: 100px;
+    border-radius: 40%;
 }
 .social-icons a{
     display: inline-flex;
@@ -267,6 +275,7 @@ body{
 
 .about img{
     width: 280px;
+    border-radius: 10%;
 }
 
 .about .info h3{
@@ -283,6 +292,35 @@ body{
 
 .about .info button{
     margin-top: 30px;
+}
+.education {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 50px;
+    /* border: 2px solid #327098; 
+    border-radius: 10px; 
+    background-color: #000914;
+    margin: 20px 50px;  */
+}
+
+.education .info {
+    text-align: center;
+    width: 100%;
+}
+
+.education .info h3 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.education .info p {
+    color: #ccc;
+    font-size: 14px;
+    margin: 5px 0;
 }
 
 .skills{
@@ -529,9 +567,7 @@ footer .cols .news-col form button i{
     footer .cols .news-col{
         flex-basis: 50%;
     }
-    .main{
-        padding-bottom: 350px;
-    }
+
     .social-icons a {
         width: 3rem;
         height: 3rem;
@@ -550,11 +586,14 @@ footer .cols .news-col form button i{
         display: none;
     }
     .main h4{
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .main p.title{
-        font-size: 22px;
+        font-size: 18px;
+    }
+    .main p.title span{
+        font-size: 16px;
     }
 
     .main p.subtitle{
@@ -569,7 +608,7 @@ footer .cols .news-col form button i{
         flex-wrap: wrap;
         justify-content: center;
     }
-
+    
 }
 
 @media screen and (max-width: 650px) {
@@ -583,21 +622,22 @@ footer .cols .news-col form button i{
     }
 
     .navbar ul li a{
-        font-size: 14px;
+        font-size: 12px;
     }
-
     .main{
         margin-top: 50px;
         height: 320px;
         justify-content: start;
+        padding-bottom: 350px;
     }
 
     .main h4{
         font-size: 20px;
     }
 
-    .main p.title{
+    .main p.title,.main p.title span{
         font-size:19px;
+        text-align: center;
     }
 
     .main p.subtitle{
@@ -649,11 +689,12 @@ footer .cols .news-col form button i{
 
 @media screen and (max-width: 480px) {
     .main h4{
-        font-size: 16px;
+        font-size: 14px;
     }
     
-    .main p.title{
-        font-size: 13px;
+    .main p.title,.main p.title span{
+        font-size: 12px;
+        text-align: center;
     }
 
     .main p.subtitle{
