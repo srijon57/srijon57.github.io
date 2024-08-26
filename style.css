@@ -10,20 +10,93 @@
 body {
     height: 100vh;
     background: #000914;
+    cursor: url('assets/cursor.svg'), auto;
 }
+a {
+    cursor: url('assets/pointer.svg'), pointer;
+}
+
 .centered-text {
     text-align: center;
     display: block;
     font-size: small;
     color: gray;
 }
-.navbar {
+
+.nav-bar {
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    height: 80px;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: #000914;
+    /* height: 80px; */
     padding: 0 50px;
 }
+
+.menu {
+    display: flex;
+    
+}
+
+.menu li {
+    padding-left: 30px;
+}
+
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    font-size: 14px;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #327098;
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover {
+    color: #327098; 
+}
+.menu li a:hover:after {
+    width: 100%;
+    color: #327098;
+    border-bottom: 3px solid #327098;
+}
+
+.open-menu,
+.close-menu {
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+#check {
+    display: none;
+}
+
 
 .animated-heading {
     position: relative;
@@ -35,6 +108,7 @@ body {
     text-align: center;
     cursor: pointer;
     transition: color 0.4s ease, transform 0.4s ease;
+    cursor: url('assets/pointer.svg'), pointer;
 }
 
 .animated-heading::before,
@@ -51,7 +125,7 @@ body {
 .animated-heading::before {
     top: 0;
     left: 0;
-    border-top: 2px solid #ff6347; 
+    border-top: 2px solid #ff6347;
     border-left: 2px solid #ff6347;
     transform: scaleX(0);
     transform-origin: left;
@@ -60,7 +134,7 @@ body {
 .animated-heading::after {
     bottom: 0;
     right: 0;
-    border-bottom: 2px solid #1e90ff; 
+    border-bottom: 2px solid #1e90ff;
     border-right: 2px solid #1e90ff;
     transform: scaleX(0);
     transform-origin: right;
@@ -68,7 +142,7 @@ body {
 
 .animated-heading:hover {
     color: #ff6347;
-    transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1);
 }
 
 .animated-heading:hover::before {
@@ -77,36 +151,7 @@ body {
 
 .animated-heading:hover::after {
     transform: scaleX(1);
-    box-shadow: 0 0 15px rgba(30, 144, 255, 0.6); 
-}
-
-.navbar h2:hover {
-    transform: scale(1.1);
-}
-.navbar ul {
-    display: flex;
-}
-
-.navbar ul li {
-    list-style: none;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    margin-right: 25px;
-    transition: color 0.3s ease;
-}
-
-.navbar ul li:hover a,
-.navbar ul li:active {
-    color: #327098;
-    border-bottom: 3px solid #327098;
-}
-
-.navbar ul li:last-child a {
-    margin: 0;
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.6);
 }
 
 .hire-btn {
@@ -141,6 +186,7 @@ body {
     outline-offset: calc(var(--s) / -2);
     cursor: pointer;
     transition: 0.3s;
+    cursor: url('assets/pointer.svg'), pointer;
 }
 
 .main .animated-logo:hover {
@@ -274,6 +320,7 @@ body {
     border: 1px solid transparent;
     cursor: pointer;
     transition: all 0.3s ease;
+    cursor: url('assets/pointer.svg'), pointer;
 }
 
 .guarantee .item:hover {
@@ -332,7 +379,7 @@ body {
     background: rgba(255, 255, 255, 0.08);
     display: inline-block;
     color: #327098;
-    border-radius: 12px;
+    border-radius: 40px 999em 999em 40px;
 }
 
 .about {
@@ -454,11 +501,78 @@ body {
     transform: scale(1.1) rotate(5deg);
     background: linear-gradient(145deg, #4680c2, #829fbf);
 }
-/* Cvresume */
-#resume {
+
+/* For project */
+#projects {
     margin-top: 200px;
 }
 
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.project-card {
+    background: linear-gradient(0deg, #282c34 0%, #000914 100%);
+    border-radius: 10% 25% ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    align-items: center; 
+    text-align: center; 
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px cyan;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, #282c34 0%, #0b376c 100%);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+}
+
+.project-card:hover::before {
+    transform: scaleX(1);
+}
+
+.project-card h3 {
+    color:dodgerblue;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #fff;
+    margin: 5px 0;
+}
+
+.project-card a {
+    color:dodgerblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* Cvresume */
 .about .styled-btn {
     width: 150px;
     height: 55px;
@@ -467,13 +581,13 @@ body {
     background-color: #1b3e67;
     color: white;
     box-shadow: 0px 10px 10px rgb(210, 187, 253) inset,
-                0px 5px 10px rgba(5, 5, 5, 0.212),
-                0px -10px 10px #1b3e67 inset;
+        0px 5px 10px rgba(5, 5, 5, 0.212), 0px -10px 10px #1b3e67 inset;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    cursor: url('assets/pointer.svg'), pointer;
 }
 
 .about .styled-btn::before,
@@ -499,7 +613,6 @@ body {
 .about .styled-btn:hover {
     animation: jello-horizontal 0.9s both;
 }
-
 
 @keyframes jello-horizontal {
     0% {
@@ -936,6 +1049,7 @@ footer .cols .news-col form button i {
     }
 }
 
+
 /* For Mobile Responsive */
 
 @media screen and (max-width: 1100px) {
@@ -997,7 +1111,7 @@ footer .cols .news-col form button i {
         font-size: 1.5rem;
         margin: 2rem 1rem 2rem 0;
     }
-    #resume {
+    #projects {
         margin-top: 400px;
     }
 }
@@ -1012,7 +1126,9 @@ footer .cols .news-col form button i {
     .main h4 {
         font-size: 20px;
     }
-
+    .project-card {
+        width: 90%;
+    }
     .main p.title {
         font-size: 18px;
     }
@@ -1032,20 +1148,33 @@ footer .cols .news-col form button i {
         flex-wrap: wrap;
         justify-content: center;
     }
+    .menu {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #000914;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        top:0;
+        z-index: 99;
+    }
+
+    .menu li {
+        padding: 10px 0;
+    }
+
+    #check:checked ~ .menu {
+        display: flex;
+    }
+
+    .open-menu,.close-menu {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 650px) {
-    .navbar {
-        justify-content: center;
-    }
-
-    .navbar h2 {
-        display: none;
-    }
-
-    .navbar ul li a {
-        font-size: 12px;
-    }
     .main {
         margin-top: 50px;
         height: 320px;
@@ -1107,7 +1236,10 @@ footer .cols .news-col form button i {
     footer .cols .news-col {
         flex-basis: 100%;
     }
-    
+    .nav-bar {
+        padding: 0 20px;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -1139,5 +1271,4 @@ footer .cols .news-col form button i {
     .skills {
         padding: 0 10px;
     }
-    
 }

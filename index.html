@@ -43,22 +43,29 @@
         <div class="star"></div>
         <div class="star"></div>
         <div class="star"></div>
-        <div class="star"></div>
     </div>
     <div>
         <div class="centered-text">"In the name of Allah most gracious most merciful"</div>
-        <div class="navbar">
-            <h2 id="Home" class="animated-heading">SRIJON</h2>
-
-
-            <ul>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#Connect">Contact</a></li>
-            </ul>
-        </div>
+        <header>
+            <nav>
+                <ul class="nav-bar">
+                    <li class="logo">
+                        <h2 id="Home" class="animated-heading">SRIJON</h2>
+                    </li>
+                    <input type="checkbox" id="check" />
+                    <span class="menu">
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <!-- <li><a href="#Connect">Contact</a></li> -->
+                        <label for="check" class="close-menu"><i class="bx bx-x"></i></label>
+                    </span>
+                    <label for="check" class="open-menu"><i class="bx bx-menu"></i></label>
+                </ul>
+            </nav>
+        </header>
 
         <div class="main">
             <h4>Greetings, <span>K.M. Hasibur Rahman Srijon</span> here 👋</h4>
@@ -133,7 +140,6 @@
             </div>
         </div>
         <h5 id="education" class="seprator">Education</h5>
-
         <div class="education">
             <div class="info">
                 <h3 style="color: #69adda;">Ahsanullah University of Science and Technology</h3>
@@ -148,8 +154,8 @@
                 <p>2019 – 2021</p>
             </div>
         </div>
-        <h5 id="skills" class="seprator">My Skills</h5>
 
+        <h5 id="skills" class="seprator">My Skills</h5>
         <div class="skills">
             <div class="left">
                 <div class="info">
@@ -163,10 +169,12 @@
 
             <div class="right">
                 <div class="item">
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><i class='bx bxl-html5'></i></a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><i
+                            class='bx bxl-html5'></i></a>
                 </div>
                 <div class="item">
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><i class='bx bxl-css3'></i></a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><i
+                            class='bx bxl-css3'></i></a>
                 </div>
                 <div class="item">
                     <a href="https://www.typescriptlang.org/" target="_blank"><i class='bx bxl-typescript'></i></a>
@@ -175,7 +183,8 @@
                     <a href="https://git-scm.com/" target="_blank"><i class='bx bxl-git'></i></a>
                 </div>
                 <div class="item">
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><i class='bx bxl-javascript'></i></a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><i
+                            class='bx bxl-javascript'></i></a>
                 </div>
                 <div class="item">
                     <a href="https://reactjs.org/" target="_blank"><i class='bx bxl-react'></i></a>
@@ -187,7 +196,8 @@
                     <a href="https://www.java.com/en/" target="_blank"><i class='bx bxl-java'></i></a>
                 </div>
                 <div class="item">
-                    <a href="https://visualstudio.microsoft.com/" target="_blank"><i class='bx bxl-visual-studio'></i></a>
+                    <a href="https://visualstudio.microsoft.com/" target="_blank"><i
+                            class='bx bxl-visual-studio'></i></a>
                 </div>
                 <div class="item">
                     <a href="https://github.com/" target="_blank"><i class='bx bxl-github'></i></a>
@@ -207,52 +217,86 @@
                 <div class="item">
                     <a href="https://firebase.google.com/" target="_blank"><i class='bx bxl-firebase'></i></a>
                 </div>
-            
+
                 <!-- Iconify -->
-            
+
                 <div class="item">
-                    <a href="https://dart.dev/" target="_blank"><span class="iconify" data-icon="fa6-brands:dart-lang" data-width="34" data-height="34"></span></a>
+                    <a href="https://dart.dev/" target="_blank"><span class="iconify" data-icon="fa6-brands:dart-lang"
+                            data-width="34" data-height="34"></span></a>
                 </div>
                 <div class="item">
-                    <a href="https://www.mysql.com/" target="_blank"><span class="iconify" data-icon="tabler:sql" data-width="34" data-height="34"></span></a>
+                    <a href="https://www.mysql.com/" target="_blank"><span class="iconify" data-icon="tabler:sql"
+                            data-width="34" data-height="34"></span></a>
                 </div>
                 <div class="item">
-                    <a href="https://www.mysql.com/" target="_blank"><span class="iconify" data-icon="devicon-plain:mysql-wordmark" data-width="34" data-height="34"></span></a>
+                    <a href="https://www.mysql.com/" target="_blank"><span class="iconify"
+                            data-icon="devicon-plain:mysql-wordmark" data-width="34" data-height="34"></span></a>
                 </div>
                 <div class="item">
-                    <a href="https://cloudinary.com/" target="_blank"><span class="iconify" data-icon="simple-icons:cloudinary" data-width="34" data-height="34"></span></a>
+                    <a href="https://cloudinary.com/" target="_blank"><span class="iconify"
+                            data-icon="simple-icons:cloudinary" data-width="34" data-height="34"></span></a>
                 </div>
                 <div class="item">
-                    <a href="https://www.postman.com/" target="_blank"><span class="iconify" data-icon="simple-icons:postman" data-width="34" data-height="34"></span></a>
+                    <a href="https://www.postman.com/" target="_blank"><span class="iconify"
+                            data-icon="simple-icons:postman" data-width="34" data-height="34"></span></a>
                 </div>
                 <div class="item">
-                    <a href="https://www.adobe.com/products/photoshop.html" target="_blank"><span class="iconify" data-icon="basil:adobe-photoshop-solid" data-width="34" data-height="34"></span></a>
+                    <a href="https://www.adobe.com/products/photoshop.html" target="_blank"><span class="iconify"
+                            data-icon="basil:adobe-photoshop-solid" data-width="34" data-height="34"></span></a>
                 </div>
                 <div class="item">
-                    <a href="https://www.adobe.com/products/illustrator.html" target="_blank"><span class="iconify" data-icon="simple-icons:adobeillustrator" data-width="34" data-height="34"></span></a>
+                    <a href="https://www.adobe.com/products/illustrator.html" target="_blank"><span class="iconify"
+                            data-icon="simple-icons:adobeillustrator" data-width="34" data-height="34"></span></a>
                 </div>
                 <div class="item">
-                    <a href="https://www.microsoft.com/en-us/microsoft-365/word" target="_blank"><span class="iconify" data-icon="mdi:microsoft-word" data-width="34" data-height="34"></span></a>
+                    <a href="https://www.microsoft.com/en-us/microsoft-365/word" target="_blank"><span class="iconify"
+                            data-icon="mdi:microsoft-word" data-width="34" data-height="34"></span></a>
                 </div>
                 <div class="item">
-                    <a href="https://www.microsoft.com/en-us/microsoft-365/powerpoint" target="_blank"><span class="iconify" data-icon="teenyicons:ms-powerpoint-solid" data-width="34" data-height="34"></span></a>
+                    <a href="https://www.microsoft.com/en-us/microsoft-365/powerpoint" target="_blank"><span
+                            class="iconify" data-icon="teenyicons:ms-powerpoint-solid" data-width="34"
+                            data-height="34"></span></a>
                 </div>
                 <div class="item">
-                    <a href="https://www.wondershare.com/" target="_blank"><span class="iconify" data-icon="simple-icons:wondershare" data-width="34" data-height="34"></span></a>
+                    <a href="https://www.wondershare.com/" target="_blank"><span class="iconify"
+                            data-icon="simple-icons:wondershare" data-width="34" data-height="34"></span></a>
                 </div>
                 <div class="item">
-                    <a href="https://expressjs.com/" target="_blank"><span class="iconify" data-icon="skill-icons:expressjs-light" data-width="34" data-height="34"></span></a>
+                    <a href="https://expressjs.com/" target="_blank"><span class="iconify"
+                            data-icon="skill-icons:expressjs-light" data-width="34" data-height="34"></span></a>
                 </div>
                 <div class="item">
-                    <a href="https://vitejs.dev/" target="_blank"><span class="iconify" data-icon="simple-icons:vite" data-width="34" data-height="34"></span></a>
+                    <a href="https://vitejs.dev/" target="_blank"><span class="iconify" data-icon="simple-icons:vite"
+                            data-width="34" data-height="34"></span></a>
                 </div>
-            
+
                 <!-- Add other skill items here -->
             </div>
         </div>
 
-        <h5 id="resume" class="seprator">CV/Resume</h5>
+        <h5 id="projects" class="seprator">Projects</h5>
+        <div class="projects">
+            <div class="project-card">
+                <h3>GEEK STREET BD</h3>
+                <p><strong>Tech Stack:</strong> MONGO DB, EXPRESS.JS, NODE.JS, REACT, HTML, CSS, JAVASCRIPT</p>
+                <p><strong>Description:</strong>Built an e-commerce site using the MERN stack for tech product sales. Integrated search, user authentication, and responsive design.</p>
+                <a href="https://github.com/srijon57/GeeK-Street-MERN" target="_blank">GitHub Link</a>
+            </div>
+            <div class="project-card">
+                <h3>Uni-Craft</h3>
+                <p><strong>Tech Stack:</strong> DART, FLUTTER, GIT, GITHUB, FIREBASE</p>
+                <p><strong>Description:</strong> Developed a Flutter app for students to track class information and assignments, featuring real-time notifications and a user-friendly interface.</p>
+                <a href="https://github.com/srijon57/Uni-Craft" target="_blank">GitHub Link</a>
+            </div>
+            <div class="project-card">
+                <h3>Akash Dosshu</h3>
+                <p><strong>Tech Stack:</strong> C, C++, VISUAL STUDIO, DATA STRUCTURE, IGRAPHICS</p>
+                <p><strong>Description:</strong> Created a 2D space-craft game with iGraphics, offering engaging gameplay and a captivating storyline, with thorough testing for performance.</p>
+                <a href="https://github.com/srijon57/Akash-Dosshu-CSE1200" target="_blank">GitHub Link</a>
+            </div>
+        </div>
 
+        <h5 id="resume" class="seprator">CV/Resume</h5>
         <div class="about">
             <div class="info">
                 <h3 style="color: #69adda;">Check my CV/Resume</h3>
@@ -286,7 +330,7 @@
                 </div>
 
                 <div class="links-col">
-                    <h4>Useful Links</h4>
+                    <h4>Overview</h4>
                     <a href="#Home">Home</a>
                     <a href="#about">About</a>
                     <a href="#skills">Skills</a>
