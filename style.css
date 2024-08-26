@@ -16,6 +16,7 @@ a {
     cursor: url('assets/pointer.svg'), pointer;
 }
 
+/* in the name of */
 .centered-text {
     text-align: center;
     display: block;
@@ -23,6 +24,7 @@ a {
     color: gray;
 }
 
+/* Navbar/header */
 .nav-bar {
     width: 100%;
     display: flex;
@@ -97,7 +99,7 @@ a {
     display: none;
 }
 
-
+/* SRIJON Logo in header */
 .animated-heading {
     position: relative;
     font-family: "Arial", sans-serif;
@@ -154,48 +156,13 @@ a {
     box-shadow: 0 0 15px rgba(30, 144, 255, 0.6);
 }
 
-.hire-btn {
-    background: #327098;
-    padding: 6px 30px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-}
-
-.hire-btn:hover {
-    background: #255474;
-}
-
+/* Start of greetings... */
 .main {
     height: 640px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-.main .animated-logo {
-    --s: 250px;
-    --b: 4px;
-    --g: 14px;
-    --c: #4b7fb7;
-
-    aspect-ratio: 1;
-    outline: calc(var(--s) / 2.5) solid #0009;
-    outline-offset: calc(var(--s) / -2);
-    cursor: pointer;
-    transition: 0.3s;
-    cursor: url('assets/pointer.svg'), pointer;
-}
-
-.main .animated-logo:hover {
-    outline: var(--b) solid var(--c);
-    outline-offset: var(--g);
-}
-
-.main .animated-logo + .animated-logo {
-    border-radius: 50%;
 }
 
 .main h4 {
@@ -238,7 +205,7 @@ a {
     content: "";
     background-color: #000914;
     position: absolute;
-    width: calc(100% + 8px);
+    max-width: 100%;
     height: 100%;
     border-left: 3px solid black;
     right: -8;
@@ -267,11 +234,14 @@ a {
     }
 }
 
+
 .main p.subtitle {
     font-size: 16px;
     color: #ccc;
     margin-top: 20px;
 }
+
+/* main profile picture */
 
 .main img {
     width: 200px;
@@ -279,6 +249,30 @@ a {
     margin-top: 100px;
     border-radius: 40%;
 }
+.main .animated-logo {
+    --s: 250px;
+    --b: 4px;
+    --g: 14px;
+    --c: #4b7fb7;
+
+    aspect-ratio: 1;
+    outline: calc(var(--s) / 2.5) solid #0009;
+    outline-offset: calc(var(--s) / -2);
+    cursor: pointer;
+    transition: 0.3s;
+    cursor: url('assets/pointer.svg'), pointer;
+}
+
+.main .animated-logo:hover {
+    outline: var(--b) solid var(--c);
+    outline-offset: var(--g);
+}
+
+.main .animated-logo + .animated-logo {
+    border-radius: 50%;
+}
+
+/* icons under main picture */
 .social-icons a {
     display: inline-flex;
     justify-content: center;
@@ -300,6 +294,8 @@ a {
     background-color: #4b7fb7;
     box-shadow: 0 0 25px #4b7fb7;
 }
+
+/* exp projects cp solved*/
 .guarantee {
     margin-top: 50px;
     padding: 0 50px;
@@ -373,6 +369,7 @@ a {
     color: #327098;
 }
 
+/* For every seperator id */
 .seprator {
     margin: 50px 50px 30px;
     padding: 10px 20px;
@@ -382,6 +379,7 @@ a {
     border-radius: 40px 999em 999em 40px;
 }
 
+/* about me */
 .about {
     display: flex;
     justify-content: space-between;
@@ -404,7 +402,7 @@ a {
 
 .about .info p {
     color: #ccc;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .about .info button {
@@ -438,7 +436,7 @@ a {
 
 .education .info p {
     color: #ccc;
-    font-size: 14px;
+    font-size: 15px;
     margin: 5px 0;
 }
 
@@ -573,7 +571,20 @@ a {
 
 
 /* Cvresume */
-.about .styled-btn {
+.cvresume{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    padding: 0 50px;
+}
+.cvresume .info h3 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.cvresume .styled-btn {
     width: 150px;
     height: 55px;
     border-radius: 45px;
@@ -588,10 +599,11 @@ a {
     justify-content: center;
     position: relative;
     cursor: url('assets/pointer.svg'), pointer;
+    margin-top: 20px;
 }
 
-.about .styled-btn::before,
-.about .styled-btn::after {
+.cvresume .styled-btn::before,
+.cvresume .styled-btn::after {
     content: "";
     position: absolute;
     width: 70%;
@@ -601,16 +613,16 @@ a {
     border-radius: 50%;
 }
 
-.about .styled-btn::before {
+.cvresume .styled-btn::before {
     top: 7px;
 }
 
-.about .styled-btn::after {
+.cvresume .styled-btn::after {
     bottom: 7px;
     background-color: rgba(250, 250, 250, 0.137);
 }
 
-.about .styled-btn:hover {
+.cvresume .styled-btn:hover {
     animation: jello-horizontal 0.9s both;
 }
 
@@ -683,7 +695,24 @@ footer .start button:hover {
     background-color: #fff;
     border-color: #fff;
 }
+footer .start button {
+    animation: pulse 1.5s infinite;
+}
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 footer .cols {
     display: flex;
     align-items: start;
