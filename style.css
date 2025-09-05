@@ -10,10 +10,10 @@
 body {
     height: 100vh;
     background: #000914;
-    cursor: url('assets/cursor.svg'), auto;
+    cursor: url("assets/cursor.svg"), auto;
 }
 a {
-    cursor: url('assets/pointer.svg'), pointer;
+    cursor: url("assets/pointer.svg"), pointer;
 }
 
 /* in the name of */
@@ -39,7 +39,6 @@ a {
 
 .menu {
     display: flex;
-    
 }
 
 .menu li {
@@ -67,7 +66,7 @@ a {
     transition: 0.15s ease-in-out;
 }
 .menu li a:hover {
-    color: #327098; 
+    color: #327098;
 }
 .menu li a:hover:after {
     width: 100%;
@@ -110,7 +109,7 @@ a {
     text-align: center;
     cursor: pointer;
     transition: color 0.4s ease, transform 0.4s ease;
-    cursor: url('assets/pointer.svg'), pointer;
+    cursor: url("assets/pointer.svg"), pointer;
 }
 
 .animated-heading::before,
@@ -234,7 +233,6 @@ a {
     }
 }
 
-
 .main p.subtitle {
     font-size: 16px;
     color: #ccc;
@@ -260,7 +258,7 @@ a {
     outline-offset: calc(var(--s) / -2);
     cursor: pointer;
     transition: 0.3s;
-    cursor: url('assets/pointer.svg'), pointer;
+    cursor: url("assets/pointer.svg"), pointer;
 }
 
 .main .animated-logo:hover {
@@ -316,7 +314,7 @@ a {
     border: 1px solid transparent;
     cursor: pointer;
     transition: all 0.3s ease;
-    cursor: url('assets/pointer.svg'), pointer;
+    cursor: url("assets/pointer.svg"), pointer;
 }
 
 .guarantee .item:hover {
@@ -506,24 +504,27 @@ a {
 }
 
 .projects {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     justify-content: center;
-    margin: 20px 0;
+    margin: 20px 50px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-card {
     background: linear-gradient(0deg, #282c34 0%, #000914 100%);
-    border-radius: 10% 25% ;
+    border-radius: 10% 25%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     padding: 20px;
     width: 300px;
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
     overflow: hidden;
-    align-items: center; 
-    text-align: center; 
+    align-items: center;
+    text-align: center;
 }
 
 .project-card:hover {
@@ -532,7 +533,7 @@ a {
 }
 
 .project-card::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -550,7 +551,7 @@ a {
 }
 
 .project-card h3 {
-    color:dodgerblue;
+    color: dodgerblue;
     margin-bottom: 10px;
 }
 
@@ -560,7 +561,7 @@ a {
 }
 
 .project-card a {
-    color:dodgerblue;
+    color: dodgerblue;
     text-decoration: none;
     font-weight: bold;
 }
@@ -569,9 +570,8 @@ a {
     text-decoration: underline;
 }
 
-
 /* Cvresume */
-.cvresume{
+.cvresume {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -598,7 +598,7 @@ a {
     align-items: center;
     justify-content: center;
     position: relative;
-    cursor: url('assets/pointer.svg'), pointer;
+    cursor: url("assets/pointer.svg"), pointer;
     margin-top: 20px;
 }
 
@@ -689,12 +689,12 @@ footer .start button {
     padding: 8px 20px;
     border-radius: 100px;
     transition: all 0.3s ease;
-    cursor: url('assets/pointer.svg'), pointer;
+    cursor: url("assets/pointer.svg"), pointer;
 }
 
 footer .start button:hover {
-    background-color:lightblue;
-    border-color:mediumblue;
+    background-color: lightblue;
+    border-color: mediumblue;
 }
 footer .start button {
     animation: pulse 1.5s infinite;
@@ -757,7 +757,6 @@ footer .cols .links-col a:hover {
     color: #327098;
     text-shadow: 0 0 10px #329198, 0 0 20px #329896, 0 0 30px #328798;
 }
-
 
 footer .cols .news-col {
     flex: 3;
@@ -1191,6 +1190,9 @@ footer .cols .news-col form button i {
     #projects {
         margin-top: 400px;
     }
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media screen and (max-width: 780px) {
@@ -1234,7 +1236,7 @@ footer .cols .news-col form button i {
         width: 100%;
         padding: 20px 0;
         text-align: center;
-        top:0;
+        top: 0;
         z-index: 99;
     }
 
@@ -1245,8 +1247,11 @@ footer .cols .news-col form button i {
     #check:checked ~ .menu {
         display: flex;
     }
-
-    .open-menu,.close-menu {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .open-menu,
+    .close-menu {
         display: block;
     }
 }
@@ -1316,7 +1321,9 @@ footer .cols .news-col form button i {
     .nav-bar {
         padding: 0 20px;
     }
-
+    .projects {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 @media screen and (max-width: 480px) {

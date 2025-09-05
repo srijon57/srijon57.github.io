@@ -46,26 +46,7 @@
     </div>
     <div>
         <div class="centered-text">"In the name of Allah most gracious most merciful"</div>
-        <header>
-            <nav>
-                <ul class="nav-bar">
-                    <li class="logo">
-                        <h2 id="Home" class="animated-heading">SRIJON</h2>
-                    </li>
-                    <input type="checkbox" id="check" />
-                    <span class="menu">
-                        <li><a href="#Home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <!-- <li><a href="#Connect">Contact</a></li> -->
-                        <label for="check" class="close-menu"><i class="bx bx-x"></i></label>
-                    </span>
-                    <label for="check" class="open-menu"><i class="bx bx-menu"></i></label>
-                </ul>
-            </nav>
-        </header>
+        <div id="navbar"></div>
 
         <div class="main">
             <h4>Greetings, <span>K.M. Hasibur Rahman Srijon</span> here 👋</h4>
@@ -73,7 +54,7 @@
             <p class="subtitle">"A CSE Student's Journey through Coding, AI, and Athletics"</p>
             <img class="animated-logo" src="assets/logo.jpg" width="100px" height="300px">
             <div class="social-icons">
-                <a href="https://bd.linkedin.com/in/k-m-hasibur-rahman-srijon-5346b0220"><span class="iconify"
+                <a href="https://www.linkedin.com/in/k-m-hasibur-rahman-srijon-138171366/"><span class="iconify"
                         data-icon="mdi:linkedin" data-width="32"></span></a>
                 <a href="https://github.com/srijon57"><span class="iconify" data-icon="mdi:github"
                         data-width="32"></span></a>
@@ -90,7 +71,7 @@
                     <i class='bx bx-check-shield'></i>
                 </div>
                 <div class="info">
-                    <h3>+1.5</h3>
+                    <h3>+2.5</h3>
                     <p>Years Of Experiences</p>
                 </div>
                 <i class='bx bx-chevron-right'></i>
@@ -100,7 +81,7 @@
                     <i class='bx bx-check-circle'></i>
                 </div>
                 <div class="info">
-                    <h3>+3</h3>
+                    <h3>+6</h3>
                     <p>Completed Projects</p>
                 </div>
                 <i class='bx bx-chevron-right'></i>
@@ -117,275 +98,33 @@
             </div>
         </div>
 
-        <h5 id="about" class="seprator">Who I Am</h5>
+        <div id="about"></div>
+        <div id="education"></div>
+        <div id="skills"></div>
+        <div id="projects"></div>
+        <div id="resume"></div>
+        <div id="footer"></div>
 
-        <div class="about">
-            <img src="assets/image.jpg">
-            <div class="info">
-                <h3 style="color: #69adda;">About Me</h3>
-                <p>
-                    I'm a CSE student at Ahsanullah University of Science and Technology in Dhaka, Bangladesh,
-                    passionate
-                    about coding, competitive programming, machine learning, and deep learning. Alongside my academic
-                    pursuits, I find joy and balance in sports, which provide a refreshing break from the digital world.
-                    Constantly exploring the intersections of technology and athletics, I strive to excel both in the
-                    realms
-                    of computer science and physical activity. My ambition is to leverage my skills in programming and
-                    AI to
-                    make meaningful contributions to society and the tech industry. With a multidisciplinary approach to
-                    learning and a drive for excellence, I'm eager to embrace the challenges and opportunities that lie
-                    ahead.
-                </p>
+        <script>
+            // Loading Html in specified element
+            function loadHTML(file, elementId) {
+                fetch(file)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById(elementId).innerHTML = data;
+                    })
+                    .catch(error => console.error('Error loading ' + file + ':', error));
+            }
 
-            </div>
-        </div>
-        <h5 id="education" class="seprator">Education</h5>
-        <div class="education">
-            <div class="info">
-                <h3 style="color: #69adda;">Ahsanullah University of Science and Technology</h3>
-                <p>Dhaka, Bangladesh</p>
-                <p>BACHELOR OF COMPUTER SCIENCE AND ENGINEERING, CGPA: 3.##/4.00</p>
-                <p>September 2022 – Present</p>
-            </div>
-            <div class="info">
-                <h3 style="color: #69adda;">Government Brajalal College</h3>
-                <p>Khulna, Bangladesh</p>
-                <p>HIGHER SECONDARY SCHOOL CERTIFICATE, GPA: 5.00/5.00</p>
-                <p>2019 – 2021</p>
-            </div>
-        </div>
-
-        <h5 id="skills" class="seprator">My Skills</h5>
-        <div class="skills">
-            <div class="left">
-                <div class="info">
-                    <h3 style="color: #69adda;">What My Programming Skills Included?</h3>
-                    <p>
-                        I'm currently learning Machine and Deep learning for research. I'm also trying to develop my
-                        competitive programming skills.
-                    </p>
-                </div>
-            </div>
-
-            <div class="right">
-                <div class="item">
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><i
-                            class='bx bxl-html5'></i></a>
-                </div>
-                <div class="item">
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><i
-                            class='bx bxl-css3'></i></a>
-                </div>
-                <div class="item">
-                    <a href="https://www.typescriptlang.org/" target="_blank"><i class='bx bxl-typescript'></i></a>
-                </div>
-                <div class="item">
-                    <a href="https://git-scm.com/" target="_blank"><i class='bx bxl-git'></i></a>
-                </div>
-                <div class="item">
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><i
-                            class='bx bxl-javascript'></i></a>
-                </div>
-                <div class="item">
-                    <a href="https://reactjs.org/" target="_blank"><i class='bx bxl-react'></i></a>
-                </div>
-                <div class="item">
-                    <a href="https://nodejs.org/" target="_blank"><i class='bx bxl-nodejs'></i></a>
-                </div>
-                <div class="item">
-                    <a href="https://www.java.com/en/" target="_blank"><i class='bx bxl-java'></i></a>
-                </div>
-                <div class="item">
-                    <a href="https://visualstudio.microsoft.com/" target="_blank"><i
-                            class='bx bxl-visual-studio'></i></a>
-                </div>
-                <div class="item">
-                    <a href="https://github.com/" target="_blank"><i class='bx bxl-github'></i></a>
-                </div>
-                <div class="item">
-                    <a href="https://www.python.org/" target="_blank"><i class='bx bxl-python'></i></a>
-                </div>
-                <div class="item">
-                    <a href="https://isocpp.org/" target="_blank"><i class='bx bxl-c-plus-plus'></i></a>
-                </div>
-                <div class="item">
-                    <a href="https://www.mongodb.com/" target="_blank"><i class='bx bxl-mongodb'></i></a>
-                </div>
-                <div class="item">
-                    <a href="https://flutter.dev/" target="_blank"><i class='bx bxl-flutter'></i></a>
-                </div>
-                <div class="item">
-                    <a href="https://firebase.google.com/" target="_blank"><i class='bx bxl-firebase'></i></a>
-                </div>
-
-                <!-- Iconify -->
-
-                <div class="item">
-                    <a href="https://dart.dev/" target="_blank"><span class="iconify" data-icon="fa6-brands:dart-lang"
-                            data-width="34" data-height="34"></span></a>
-                </div>
-                <div class="item">
-                    <a href="https://www.mysql.com/" target="_blank"><span class="iconify"
-                            data-icon="devicon-plain:mysql-wordmark" data-width="34" data-height="34"></span></a>
-                </div>
-                <div class="item">
-                    <a href="https://cloudinary.com/" target="_blank"><span class="iconify"
-                            data-icon="simple-icons:cloudinary" data-width="34" data-height="34"></span></a>
-                </div>
-                <div class="item">
-                    <a href="https://www.postman.com/" target="_blank"><span class="iconify"
-                            data-icon="simple-icons:postman" data-width="34" data-height="34"></span></a>
-                </div>
-                <div class="item">
-                    <a href="https://www.adobe.com/products/photoshop.html" target="_blank"><span class="iconify"
-                            data-icon="basil:adobe-photoshop-solid" data-width="34" data-height="34"></span></a>
-                </div>
-                <div class="item">
-                    <a href="https://www.adobe.com/products/illustrator.html" target="_blank"><span class="iconify"
-                            data-icon="simple-icons:adobeillustrator" data-width="34" data-height="34"></span></a>
-                </div>
-                <div class="item">
-                    <a href="https://www.microsoft.com/en-us/microsoft-365/word" target="_blank"><span class="iconify"
-                            data-icon="mdi:microsoft-word" data-width="34" data-height="34"></span></a>
-                </div>
-                <div class="item">
-                    <a href="https://www.microsoft.com/en-us/microsoft-365/powerpoint" target="_blank"><span
-                            class="iconify" data-icon="teenyicons:ms-powerpoint-solid" data-width="34"
-                            data-height="34"></span></a>
-                </div>
-                <div class="item">
-                    <a href="https://www.wondershare.com/" target="_blank"><span class="iconify"
-                            data-icon="simple-icons:wondershare" data-width="34" data-height="34"></span></a>
-                </div>
-                <div class="item">
-                    <a href="https://expressjs.com/" target="_blank"><span class="iconify"
-                            data-icon="skill-icons:expressjs-light" data-width="34" data-height="34"></span></a>
-                </div>
-                <div class="item">
-                    <a href="https://vitejs.dev/" target="_blank"><span class="iconify" data-icon="simple-icons:vite"
-                            data-width="34" data-height="34"></span></a>
-                </div>
-                 <div class="item">
-                <a href="https://www.php.net/" target="_blank"><span class="iconify" data-icon="simple-icons:php" data-width="34" data-height="34"></span></a>
-                 </div>
-                <div class="item">
-                <a href="https://laravel.com/" target="_blank"><span class="iconify" data-icon="mdi:laravel" data-width="34" data-height="34"></span></a>
-                </div>
-              <div class="item">
-                <a href="https://tailwindcss.com/" target="_blank"><span class="iconify" data-icon="mdi:tailwind" data-width="34" data-height="34"></span></a>
-                 </div>
-              <div class="item">
-                <a href="https://railway.app/" target="_blank"><span class="iconify" data-icon="simple-icons:railway" data-width="34" data-height="34"></span></a>
-                </div>
-                <div class="item">
-               <a href="https://vercel.com/" target="_blank"><span class="iconify" data-icon="ri:vercel-line"     data-width="34" data-height="34"></span></a>
-               </div>
-                <!-- Add other skill items here -->
-            </div>
-        </div>
-
-        <h5 id="projects" class="seprator">Projects</h5>
-
-        <div class="projects">
-            
-            <div class="project-card">
-                <h3>CareCritique</h3>
-                <p><strong>Tech Stack:</strong> PHP, LARAVEL, DOCKER, REACT, RAILWAY, MYSQL, DBEAVER</p>
-                <p><strong>Description:</strong>Built an healthcare site using the PHP & Laravel for searching Doctors based on patient's requerement.</p>
-                <a href="https://github.com/srijon57/CareCritique" target="_blank">GitHub Link</a>
-            </div>
-            
-            <div class="project-card">
-                <h3>GEEK STREET BD</h3>
-                <p><strong>Tech Stack:</strong> MONGO DB, EXPRESS.JS, NODE.JS, REACT, HTML, CSS, JAVASCRIPT</p>
-                <p><strong>Description:</strong>Built an e-commerce site using the MERN stack for tech product sales. Integrated search, user authentication, and responsive design.</p>
-                <a href="https://github.com/srijon57/GeeK-Street-MERN" target="_blank">GitHub Link</a>
-            </div>
-
-            <div class="project-card">
-
-                <h3>Uni-Craft</h3>
-                <p><strong>Tech Stack:</strong> DART, FLUTTER, GIT, GITHUB, FIREBASE</p>
-                <p><strong>Description:</strong> Developed a Flutter app for students to track class information and assignments, featuring real-time notifications and a user-friendly interface.</p>
-                <a href="https://github.com/srijon57/Uni-Craft" target="_blank">GitHub Link</a>
-            
-            </div>
-
-            <div class="project-card">
-                <h3>Akash Dosshu</h3>
-                <p><strong>Tech Stack:</strong> C, C++, VISUAL STUDIO, DATA STRUCTURE, IGRAPHICS</p>
-                <p><strong>Description:</strong> Created a 2D space-craft game with iGraphics, offering engaging gameplay and a captivating storyline, with thorough testing for performance.</p>
-                <a href="https://github.com/srijon57/Akash-Dosshu-CSE1200" target="_blank">GitHub Link</a>
-            </div>
-
-        </div>
-
-        <h5 id="resume" class="seprator">CV/Resume</h5>
-
-        <div class="cvresume">
-
-            <div class="info">
-                <h3 style="color: #69adda;">Check my CV/Resume</h3>
-
-                <div class="cvresume-link">
-                    <a href="https://drive.google.com/file/d/17x_4gWqVKKnEv7DJhrE-sp1APcS7OYRK/view?usp=drive_link"
-                        target="_blank">
-                        <button class="styled-btn">CV</button>
-                    </a>
-                    <a href="https://drive.google.com/file/d/1V01GXoiIncjhz-DnnUnnwjRCtcZ8NDYM/view?usp=drive_link"
-                        target="_blank">
-                        <button class="styled-btn">Resume</button>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-
-        <footer>
-            <div class="start">
-                <h3>Start a project</h3>
-                <p>Interested in working together? We should queue up a chat. I’ll buy the coffee.</p>
-                <a href="https://chat.whatsapp.com/K3cIpTEJLK4DUyOPE7YHqv">
-                    <button>Let's do this</button>
-                </a>
-            </div>
-
-            <div class="cols">
-
-                <div class="about-col">
-                    <h3>SQL Srijon</h3>
-                    <p>1 + 1 = 10</p>
-                </div>
-
-                <div class="links-col">
-                    <h4>Overview</h4>
-                    <a href="#Home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#Connect">Contact</a>
-                </div>
-
-                <div class="links-col">
-                    <h4 id="Connect">Connect with me</h4>
-                    <a href="https://www.instagram.com/sql.srijon">Instagram</a>
-                    <a href="https://bd.linkedin.com/in/k-m-hasibur-rahman-srijon-5346b0220">Linkedin</a>
-                    <a href="https://www.stopstalk.com/user/profile/124124124">StopStalk</a>
-                    <a href="https://github.com/srijon57">Github</a>
-                    <a href="https://www.facebook.com/pseudonym.srijon">Facebook</a>
-                </div>
-
-                <div class="news-col">
-                    <h4>E-mail</h4>
-                    <p>
-                        srijond57@gmail.com
-                        </br>
-                        srijond75@gmail.com
-                    </p>
-                </div>
-
-            </div>
-        </footer>
-
+            // Section file loading
+            loadHTML('navbar.html', 'navbar');
+            loadHTML('about.html', 'about');
+            loadHTML('education.html', 'education');
+            loadHTML('skills.html', 'skills');
+            loadHTML('projects.html', 'projects');
+            loadHTML('resume.html', 'resume');
+            loadHTML('footer.html', 'footer');
+        </script>
     </div>
 </body>
 </html>

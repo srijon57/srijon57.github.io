@@ -1,0 +1,380 @@
+<script type="text/javascript">
+    var gk_isXlsx = false;
+    var gk_xlsxFileLookup = {};
+    var gk_fileData = {};
+    function filledCell(cell) {
+        return cell !== "" && cell != null;
+    }
+    function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], {
+                    type: "base64",
+                });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, {
+                    header: 1,
+                    blankrows: false,
+                    defval: "",
+                });
+                var filteredData = jsonData.filter((row) =>
+                    row.some(filledCell)
+                );
+
+                var headerRowIndex = filteredData.findIndex(
+                    (row, index) =>
+                        row.filter(filledCell).length >=
+                        filteredData[index + 1]?.filter(filledCell).length
+                );
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                    headerRowIndex = 0;
+                }
+
+                var csv = XLSX.utils.aoa_to_sheet(
+                    filteredData.slice(headerRowIndex)
+                ); 
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+    }
+</script>
+<h5 id="skills" class="seprator">My Skills</h5>
+<div class="skills">
+    <div class="left">
+        <div class="info">
+            <h3 style="color: #69adda">What My Programming Skills Included?</h3>
+            <p>
+                I'm currently learning Machine and Deep learning for research.
+                I'm also trying to develop my competitive programming skills.
+            </p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="item">
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                target="_blank"
+                ><i class="bx bxl-html5"></i
+            ></a>
+        </div>
+        <div class="item">
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                target="_blank"
+                ><i class="bx bxl-css3"></i
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://www.typescriptlang.org/" target="_blank"
+                ><i class="bx bxl-typescript"></i
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://git-scm.com/" target="_blank"
+                ><i class="bx bxl-git"></i
+            ></a>
+        </div>
+        <div class="item">
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                target="_blank"
+                ><i class="bx bxl-javascript"></i
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://reactjs.org/" target="_blank"
+                ><i class="bx bxl-react"></i
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://nodejs.org/" target="_blank"
+                ><i class="bx bxl-nodejs"></i
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://www.java.com/en/" target="_blank"
+                ><i class="bx bxl-java"></i
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://visualstudio.microsoft.com/" target="_blank"
+                ><i class="bx bxl-visual-studio"></i
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://github.com/" target="_blank"
+                ><i class="bx bxl-github"></i
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://www.python.org/" target="_blank"
+                ><i class="bx bxl-python"></i
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://isocpp.org/" target="_blank"
+                ><i class="bx bxl-c-plus-plus"></i
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://www.mongodb.com/" target="_blank"
+                ><i class="bx bxl-mongodb"></i
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://flutter.dev/" target="_blank"
+                ><i class="bx bxl-flutter"></i
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://firebase.google.com/" target="_blank"
+                ><i class="bx bxl-firebase"></i
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://dart.dev/" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="fa6-brands:dart-lang"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://www.mysql.com/" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="devicon-plain:mysql-wordmark"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://cloudinary.com/" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="simple-icons:cloudinary"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://www.postman.com/" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="simple-icons:postman"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a
+                href="https://www.adobe.com/products/photoshop.html"
+                target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="basil:adobe-photoshop-solid"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a
+                href="https://www.adobe.com/products/illustrator.html"
+                target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="simple-icons:adobeillustrator"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a
+                href="https://www.microsoft.com/en-us/microsoft-365/word"
+                target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="mdi:microsoft-word"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a
+                href="https://www.microsoft.com/en-us/microsoft-365/powerpoint"
+                target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="teenyicons:ms-powerpoint-solid"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://www.sublimetext.com/" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="fontisto:sublime-text"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://www.wondershare.com/" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="simple-icons:wondershare"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://expressjs.com/" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="skill-icons:expressjs-light"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://vitejs.dev/" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="simple-icons:vite"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://www.php.net/" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="simple-icons:php"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://laravel.com/" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="mdi:laravel"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://tailwindcss.com/" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="mdi:tailwind"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://railway.app/" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="simple-icons:railway"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://vercel.com/" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="ri:vercel-line"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://www.postgresql.org/" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="akar-icons:postgresql-fill"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="devicon-plain:csharp"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://supabase.com/" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="ri:supabase-fill"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://dotnet.microsoft.com/en-us/apps/aspnet" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="devicon-plain:dotnetcore"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://www.figma.com/" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="solar:figma-bold"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+        <div class="item">
+            <a href="https://dbeaver.io/" target="_blank"
+                ><span
+                    class="iconify"
+                    data-icon="devicon-plain:dbeaver"
+                    data-width="34"
+                    data-height="34"
+                ></span
+            ></a>
+        </div>
+    </div>
+</div>

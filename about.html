@@ -1,0 +1,50 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                    row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                    headerRowIndex = 0;
+                }
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><h5 id="about" class="seprator">Who I Am</h5>
+<div class="about">
+    <img src="assets/image.jpg">
+    <div class="info">
+        <h3 style="color: #69adda;">About Me</h3>
+        <p>
+            I'm a CSE student at Ahsanullah University of Science and Technology in Dhaka, Bangladesh, passionate
+            about coding, competitive programming, machine learning, and deep learning. Alongside my academic
+            pursuits, I find joy and balance in sports, which provide a refreshing break from the digital world.
+            Constantly exploring the intersections of technology and athletics, I strive to excel both in the
+            realms of computer science and physical activity. My ambition is to leverage my skills in programming and
+            AI to make meaningful contributions to society and the tech industry. With a multidisciplinary approach to
+            learning and a drive for excellence, I'm eager to embrace the challenges and opportunities that lie
+            ahead.
+        </p>
+    </div>
+</div>
